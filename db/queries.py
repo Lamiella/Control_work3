@@ -1,0 +1,15 @@
+CREATE_TABLE_LIST ="""
+    CREATE TABLE IF NOT EXISTS list(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    bought INTEGER DEFAULT 0
+    )
+""" 
+
+INSERT_PROD = 'INSERT INTO list (name) VALUES (?)'
+
+UPDATE_PROD = "UPDATE list SET bought = ? WHERE id = ?"
+
+SELECT_PROD = 'SELECT id, name  FROM list'
+
+DELETE_PROD = 'DELETE FROM list WHERE id = ?'
